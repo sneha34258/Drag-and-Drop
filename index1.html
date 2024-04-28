@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Bootstrap Drag and drop </title>
+<meta charset ="utf-8">
+<meta name ="viewport" content= "width=device-width, initial-scale=1">
+<link rel=  "stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+</script>
+<script src= "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+
+</script>
+<style>
+    body {
+        background-color: #73a8f7;
+    }
+
+</style>
+<script>
+
+
+
+function allowDrop (ev) {
+ev.preventDefault();
+}
+function dragStart (ev) {
+ev.dataTransfer.setData ("text", ev.target.id);
+}
+function dragDrop (ev) {
+ev.preventDefault ();
+var data = ev.dataTransfer.getData ("text");
+ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
+
+<style>
+#colm3 {
+ width: calc(33.33% - 30px);
+height: auto;
+background-color: #5f4cf4;
+border:2px solid  #AD88C6; 
+border-radius: 30px;
+border-width: thick;
+float:left;
+padding:20px;
+overflow-y: auto; 
+justify-content: space-between;
+margin: 10px 15px 10px 5px;
+}
+#colm4 {
+width: calc(33.33% - 30px);
+height:auto;
+background-color: #5f4cf4;
+border:2px solid #AD88C6;
+border-width: thick;
+float:right;
+border-radius: 30px;
+padding:20px;
+overflow-y: auto; 
+justify-content: space-between;
+margin: 10px 15px 10px 16px;
+}
+#colm5 {
+width: calc(33.33% - 30px);
+height: auto;
+background-color: #5f4cf4;
+border:2px solid #AD88C6 ;
+border-width: thick;
+border-radius: 30px;
+float:right;
+padding:20px;
+overflow-y: auto; 
+margin: 10px 15px 10px 10px;
+justify-content: space-between;
+}
+#colm1 {
+    color:black;
+    font-size:130%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font:bolder;
+}
+#colm2 {
+    color: black;
+    font-size:130%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#colm11 {
+    color: black;
+    font-size:130%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#colm12 {
+    color: black;
+    font-size:130%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.heading {
+        font-size: 40px;
+        color:rgb(229, 52, 52);
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); 
+        cursor: grab; 
+    }
+
+    .heading:active {
+        cursor: grabbing; 
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<p class="heading"> Drag and drop Utility App </p>
+<div id = "colm">
+<div id="colm1" draggable ="true" ondragstart ="dragStart(event)"> •       Hey There 😊❤️ <br> The drag and drop need card class and draggable method in JavaScript.  </div>
+<div id="colm2" draggable ="true" ondragstart ="dragStart(event)"> •       The web element move required position of web pages using mouse or pointer.
+</div>
+<div id="colm11" draggable ="true" ondragstart ="dragStart(event)"> •       A drag and drop website builder is a tool that allows anyone with a computer and internet connection to create a website.
+</div>
+<div id="colm12" draggable ="true" ondragstart ="dragStart(event)"> •       All you have to do is select a basic layout, and drag pre-set elements to where you want them on each page.
+</div>
+<div id="colm3" ondrop ="dragDrop(event)" ondragover ="allowDrop(event)"></div>
+<div id="colm4" ondrop ="dragDrop(event)" ondragover ="allowDrop(event)"></div>
+<div id="colm5" ondrop ="dragDrop(event)" ondragover ="allowDrop(event)"></div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
